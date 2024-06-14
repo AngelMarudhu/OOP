@@ -28,8 +28,8 @@ export class Payment {
 
   // Return Type Enforcement: Once the appropriate overload is matched, TypeScript enforces that the actual implementation returns the type specified in the overload signature.
 
-  /// Why Return Type Alone Can't Be Used
-  // The reason why return type alone can't be used for method overloading is that the compiler wouldn't know which method to call based only on the return type since the return type is determined after the method is called, not before. The decision has to be made based on the parameters given to the method at the time of the call
+  /// Why Return Type Can't Be Used
+  // The reason why return type alone can't be used for method overloading is that the compiler wouldn't know which method to call based only on the return type since the return type is determined after the method is called, not before the decision has to be made based on the parameters given to the method at the time of the call
 
   /// how compiler take decision
   /// TypeScript, when determining which overload signature to use, the TypeScript compiler looks at the parameter types provided in the method call and matches them with the parameter types specified in the overload signatures. Once the appropriate overload signature is matched, the compiler then looks at the return type specified in that particular overload signature.
@@ -66,8 +66,27 @@ export class Payment {
       );
     }
   }
+
+  //// Function implementation is missing or not immediately following the declaration
+  //// in typescript doesn't possible to make overloading as like instance method rather then you can handle these kinda cases using a single static method with type checks or optional parameters
+
+  //// reason for static method not overloading;
+  //// The main reason static method overloading is not supported in TypeScript (or JavaScript) stems from the fact that static methods are tied to the class itself rather than instances of the class.
+  //// when Inheritance if a subclass also defines static methods with the same name, it can be unclear which method to call, leading to potential errors and unexpected behaviors
+
+  /// STATIC METHOD CAN INHERITED BUT CAN'T OVERRIDDEN BECAUSE I'VE ALREADY TOLD YOU IT'S TIED UP WITH CLASS ITSELF NOT AN INSTANCE OF ACTUAL OBJECT THAT'S WHY WE CAN'T MAKE IT STATIC SIMPLY AVOID I'M NOT A INSTANCE PROPS I'M A CLASS PROPS SO YOU CAN'T TOUCH ME LIKE HAHA
+
+  // static overLoading(): void; ///// CAN'T MAKE IT
+  ///// you can use static method like this
+  static overLoadingStatic(x: number | string): void {
+    if (typeof x === "number") {
+      console.log(`Called with number: ${x}`);
+    } else {
+      console.log(`Called with string: ${x}`);
+    }
+  }
 }
 
-let out = new Payment();
-let done = out.process(33);
-console.log(done);
+// let out = new Payment();
+// let done = out.process(33);
+// console.log(done);

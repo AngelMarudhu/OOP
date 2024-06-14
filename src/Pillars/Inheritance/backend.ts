@@ -19,6 +19,10 @@ export class Backend extends SoftwareEngineer {
   accessPrivate(): void {
     super.supering();
   }
+
+  supering(): void {
+    console.log("dsfasdfas");
+  }
 }
 
 let madonna = new Backend("Madonna", 3, "Kerala", "Django", "Python");

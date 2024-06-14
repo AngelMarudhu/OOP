@@ -46,7 +46,10 @@ import { Backend } from "./backend.js";
 //   }
 
 //   thanks(): void {
-//     let back = this.res as Backend;
+//     //// here the supering method placed on super class as you said you can only access the super class which determines what properties can be acesss but but if the same method also there in a backend class like overriding you can access the backend methods yes you're right during the runtime the actual object determine which method is going to run the method names are same but the body implementation can be different based on object
+//     this.ref.supering();
+//     //////-----------------------------------------
+//     let back = this.ref as Backend;
 //     console.log(back.frameWork);
 //   }
 // }
