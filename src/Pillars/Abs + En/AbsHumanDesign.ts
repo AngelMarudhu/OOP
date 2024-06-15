@@ -10,14 +10,14 @@ export abstract class HumanDesign {
   abstract getHumanDetails(): void;
 }
 
-//// For example one thing this is designer lever problem not an implementation problem for example act GOD as designer god says hey creator i need four methods that's done. all the implementation are your choice whatever you can put into the method doesn't matter to me i need four methods of all the humans that's all the implementation happens in encapsulation are which derived classes area along with some additional information itself done done god says hey abstraction class implementation is not your part just throw the method encapsulation will taking care of okay
+//// For example one thing remember this is designer lever problem not an implementation problem for example act GOD as designer god says hey creator i need four methods that's done. all the implementation are your choice whatever you can put into the method doesn't matter to me i need four methods of all the humans that's all the implementation happens in encapsulation are which derived classes area along with some additional information itself done done god says hey abstraction class implementation is not your part just throw the method encapsulation will taking care of okay
 
 //// encapsulation ----> implementation level problem solution bundling the methods and properties together within a class
 //// abstraction -----> designer level problem without worrying about the implementation. For example: God says, "Hey creator, I need four methods for all humans. The implementation is up to you
 
 //// 1) In a simple manner abstraction is a gaining information it's like knowing what methods a abstract class offers without diving into of how those methods are implemented it's just giving information to derived class for encapsulate all those methods with own implementation the encapsulation will take care of all those methods and private public all those mixed up that's called encapsulation
 
-//// 2) These methods are defined what humans needed and can do but we don't need to what's the inside of methods and what does it's unnecessary the actual implementation of methods will differed to the class or implemented section which encapsulation (Humans class)
+//// 2) These methods are defined what humans needed and can do but we don't need to what's the inside of methods and what does it's unne cessary the actual implementation of methods will differed to the class or implemented section which encapsulation (Humans class)
 
 //// use Cases:
 //// Abstract classes can include common methods and logic that can be shared by multiple subclasses reducing code duplication
