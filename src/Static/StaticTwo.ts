@@ -39,9 +39,11 @@ class Engineers {
   /// you can't access the non static member into static member if you want to access you need
   /// create a instance of objects because static held with human constructor classes but non static
   //// held with instance of class like human prototypes that's why
-  //// like static method ask who you are buddy i'm non static member buddy so sorry no space for
-  /// you initialize here if you want to instialize please make yourself static or create instance of
+  //// like static method ask who you are buddy i'm non static member buddy so sorry no space for you
+  /// you initialize here if you want to Initialize please make yourself static or create instance of
   //// your object that's the only way to getting space here done done
+
+  /////// STATIC ENGINEERING STUDENT
   static engineeringClass(): void {
     // if (typeof this.anotherEngineeringClass !== "function") {
     //   console.error(

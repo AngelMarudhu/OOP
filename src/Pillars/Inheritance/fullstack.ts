@@ -75,3 +75,13 @@ import { Backend } from "./backend.js";
 // }
 
 // let flying = new FlyingSwimmingAnimal(22, 44);
+
+//////// not possible multiple inheritance but possible through interface let's see next lecture
+
+// class FlyingSwimmingAnimal extends Flyer, Swimmer {
+//   constructor(flySpeed: number, swimSpeed: number) {
+//     super(flySpeed); // Error: Only refers to the constructor of the first superclass
+//     // Error: 'super' can only be referenced in a derived class constructor when specifying 'extends' or when providing a constructor implementation.
+//     this.swimSpeed = swimSpeed; // Error: Property 'swimSpeed' does not exist on type 'FlyingSwimmingAnimal'
+//   }
+// }
