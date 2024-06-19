@@ -16,6 +16,8 @@ export class Source implements PowerHub, HouseCurrent, IndustryCurrent {
   House(): void {
     console.log("coming from house");
   }
+
+  ///// note one thing in house interface have poweroff method during the compile time just engine checks interface structure checks all structure are good or not so here already initiated poweroff and house methods done but when we execute the house poweroff in the main module this poweroff executed there is no run time checks only compile check during compile time everything is good but when comes to run time check no that issue will raised there is a solution for this just go back to solution folder you will understand
 }
 
 //// MILD DISADVANTAGE OF INTERFACE SIMPLE EXAMPLE WILL SEE THE SOLUTION IN THE SOLUTION FOLDER
@@ -27,6 +29,7 @@ export class Source implements PowerHub, HouseCurrent, IndustryCurrent {
 
 // export interface HouseCurrent {
 //   House(): void;
+//   powerOff(): void;
 // }
 
 // export interface IndustryCurrent {

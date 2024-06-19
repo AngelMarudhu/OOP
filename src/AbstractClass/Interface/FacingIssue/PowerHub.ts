@@ -11,7 +11,9 @@ export interface PowerHub {
 
 // THROUGH INTERFACE WE CAN BUILD SOOPER DOOPER CUSTOM CLASSES WITH WELL STRUCTURED MANNER
 
-// interface can't be instantiated
+// interface can't be instantiated and no runtime checks only compile time check type checking
+
+// I'm not sure how other language treated interface however ts and js treating differently i'm 200% sure interface only acting compile time just checks the type and structure that's all no more runtime detection the main purpose is check type safety that's all "no impact generate js run time code"
 
 // interface only contains well structure code and contracts for all subclasses and methods without implementation which means as it abstract class no curly braces and no body one overridden methods and you must implement all the methods in a derived class
 

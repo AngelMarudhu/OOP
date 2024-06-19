@@ -20,6 +20,7 @@ export class Source {
 // }
 // export interface HouseCurrent {
 //   House(): void;
+//   powerOff(): void;
 // }
 // export interface IndustryCurrent {
 //   Industry(): void;
