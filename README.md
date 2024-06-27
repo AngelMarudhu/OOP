@@ -1,9 +1,9 @@
 <h1 align="center">Hi Im Marudhupandiyan</h1>
-<h3 align="center">Resources for who preparing for an interviews and beginners as well</h3>
+<h3 align="center">Resources for who preparing for interviews and beginners as well</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=angelmarudhu&label=Profile%20views&color=0e75b6&style=flat" alt="angelmarudhu" /> </p>
 
-<p align="centre"> <img src="./src/Content Images/content.png" alt="Content" /> </p>
+<p align="center"> <img src="./src/Content Images/content.png" alt="Content" /> </p>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
