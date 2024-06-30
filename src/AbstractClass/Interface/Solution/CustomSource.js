@@ -8,9 +8,10 @@ export class CustomSource {
     general;
     constructor() {
         this.general = new Power();
-        //// DYNAMIC CHANGE HAPPENS IN UPGRADE POWER SO CONSOLE IT THIS.GENERAL ONCE IN BROWSE YOU WILL UNDERSTAND WHAT'S HAPPENING
+        //// DYNAMIC CHANGE HAPPENS IN UPGRADE POWER SO CONSOLE IT THIS GENERAL ONCE. IN THE BROWSER YOU CAN SEE WHAT'S HAPPENING
         //// this general is a reference type it's gives what we can access but new power() actual object it's gives which can able to we access simple formula if you know this formula you can easily visualize it
     }
+    /// COMMON METHOD AND SIGNATURES CHECK INTERFACES
     turnOn() {
         this.general.powerOn();
     }

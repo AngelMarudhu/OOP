@@ -7,7 +7,7 @@
 /// Harder to understand keep on our projects became big
 /// Difficult to maintain i've already told you changes one affect others
 /// Low reusability Harder to reuse parts of the class in other contexts and harder to find bugs
-class House {
+class Houses {
     cook() {
         console.log("Cooking in the kitchen");
     }
@@ -36,8 +36,28 @@ class LivingRoom {
         console.log("Watching TV in the living room");
     }
 }
+class House {
+    kitchen;
+    bedroom;
+    livingRoom;
+    constructor() {
+        this.kitchen = new Kitchen();
+        this.bedroom = new Bedroom();
+        this.livingRoom = new LivingRoom();
+    }
+    useKitchen() {
+        this.kitchen.cook();
+    }
+    useBedroom() {
+        this.bedroom.sleep();
+    }
+    useLivingRoom() {
+        this.livingRoom.entertain();
+    }
+}
+/// here Kitchen, Bedroom, and LivingRoom: Each class has a single responsibility
 ////// O ---> Open/Closed Principals (OCP)  \\\\\\\
-// open ---> extend the class, easy to extend the class you can easily add new features and functionality
+// open ---> extend the class or implementation, easy to extend the class you can easily add new features and functionality
 // closed --> modification happens with existing code
 // Issues:
 //// let's take previous analogy in a house bedroom, kitchen, living room, pooja room isn't we need to decorate all the room let's approach without open closed principal what we do usually just write a house class putting all the rooms write a logic inside of decorate function it's normal way of doing this
@@ -48,6 +68,7 @@ class Room {
     }
     decorate() {
         if (this.type === "Kitchen") {
+            //// logic
             console.log("decorating kitchen");
         }
         else if (this.type === "bedroom") {
@@ -71,20 +92,41 @@ class PoojaRoom {
         console.log("decorating pooja rooms");
     }
 }
-////// L ---> Liskov Substitution (LSP)  \\\\\\\
+class Housea {
+    rooms = [];
+    addRoom(room) {
+        this.rooms.push(room);
+    }
+    decorateHouse() {
+        this.rooms.forEach((room) => room.decorator());
+    }
+}
+const house = new Housea();
+const kitchen = new Kitchens();
+const bedroom = new Bedrooms();
+const poojaRoom = new PoojaRoom();
+// Adding rooms to the house
+house.addRoom(kitchen);
+house.addRoom(bedroom);
+//// later added for decoration
+house.addRoom(poojaRoom);
+// decorating
+house.decorateHouse();
+////// L ---> Liskov Substitution (LSP)  \\\\\\\ /// Behavioral Consistency /// Substitutability
 //// ISSUES:
 // 1) when child class cannot perform as the same action of parent class that time you will brake the LSP rules simple
 // 2) child class should able to do all the process that everything parent class can do that's we called proper inheritance isn't
 // 3) if child class didn't make it there is something happened you break the LSP principals
 // 4) don't create new methods in child class without knowing the parent class that means no present in the parent class all the subclass should work interchangeably with the parent class you can overridden according to the child class (allowed polymorphism) don't create new method in simple terms all the subclass contract with parent class
+/// note: Subclasses should be substitutable for their base (parent) classes
 // APPROACH DIFFERENT ANALOGY FOR THIS ONE COZ EASY TO UNDERSTAND
 class Parent {
     name;
     constructor(name) {
         this.name = name;
     }
-    loving() {
-        console.log(`${this.name} loving all the humans`);
+    managing() {
+        console.log(`${this.name} managing time`);
     }
     cook() {
         console.log("as a parent we know cooking");
@@ -94,8 +136,8 @@ class childNayan extends Parent {
     constructor(name) {
         super(name);
     }
-    loving() {
-        console.log(`${this.name} loving all the humans nayan class`);
+    managing() {
+        console.log(`${this.name} managing time`);
     }
     cook() {
         console.log("i can cook what parent can");
@@ -109,8 +151,8 @@ class childMarudhu extends Parent {
     code() {
         console.log("I write code");
     }
-    loving() {
-        console.log(`${this.name} loving all the humans nayan class`);
+    managing() {
+        console.log(`${this.name} managing time`);
     }
     /// // 3) if child class didn't make it there is something happened you break the LSP principals
     cook() {
@@ -122,6 +164,7 @@ class childMarudhu extends Parent {
 // 1) first rules behavior consistency ---> all subclass provide consistent behavior expected parent
 // 2) Substitutability ----> don't create new method must work interchangeably parent to child and child to parent like interchange
 // 3) we can easily make polymorphism overridden methods
+// 4) robust inheritance
 class Human {
     name;
     constructor(name) {
@@ -184,6 +227,7 @@ class Bedroomss {
     }
 }
 class DoorSensor {
+    // depend on interface or abstraction
     detecting() {
         console.log("door sensor");
     }
@@ -194,7 +238,9 @@ class WindowSensor {
     }
 }
 class Security {
+    // depend on interface or abstraction
     sensors;
+    //// passes as parameter don't hardcode implementation
     constructor(sensor) {
         this.sensors = sensor;
     }
