@@ -2,9 +2,9 @@
 //// GENERICS SHORT AND SWEET EXPLANATION
 // when we write TYPESCRIPT code that we have variety of data types to mention explicitly isn't for type safety right marudhu what does generic here GENERIC provides way to create reusable components & functions & classes & interface generics bundled up with single source which means you don't need to explicit type safety data types generics will take care of everything you just know where do we use and how do we use let's see GENERICS can be used : Class instance members, Class Methods, Function argument value and Funtion return types with sinlge source
 /////////////////////////////// USE CASES OF GENERICS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// 1) Reusabiity --> we can write a code once with different data types with help of GENERICS
+// 1) Reusability --> we can write a code once with different data types with help of GENERICS
 // 2) Type Safety ---> i hop you all know what it is ensuring the data type during the compile-time if anything goes wrong
-// 3) SingleSource---> you don't need to mention the data types repetedly GEN adopt based on user type used hahahahahah
+// 3) SingleSource---> you don't need to mention the data types repeatedly GEN adopt based on user type used hahahahahah
 //// T ---> Before initial ----> T stands for any type and it could be any data type num, str.....
 //// T ---> After initial ----> When we call the function the T adopt based on the input
 ////// MOST USED PLACES
