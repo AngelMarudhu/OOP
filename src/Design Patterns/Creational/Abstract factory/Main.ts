@@ -1,4 +1,8 @@
 /// ABS PRODUCT INTERFACE
+
+// Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes
+// This approach ensures scalability and encapsulation, allowing for easy addition of new product variants without modifying existing code
+
 interface IceCream {
   flavor(): string;
   price(): number;
@@ -67,7 +71,10 @@ class IceErrors extends Error {
 }
 
 //// ABS FACTORY INTERFACE
+/// provides an interface for creating families of related or dependent objects without specifying their concrete classes
 interface IceCreamFactory {
+  ///// providing interface of families of icecream related or dependent
+  ///// we all know interface means no curly braces no body here also same we are specifed the icecream concrete classes without implementation interface return types all are interfaces that will take care
   makeStickIceCream(): StickType;
   makeScoopIceCream(): ScoopType;
   makeConeIceCream(): ConeType;

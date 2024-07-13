@@ -6,6 +6,10 @@ export class Bus extends Vehicle {
     this.names = name;
   }
 
+  AccessingNormalMethodFromAbsClass(): void {
+    this.Normal();
+  }
+
   MetalVehicle(): void {
     console.log("metal vehicle" + " " + this.names);
   }
