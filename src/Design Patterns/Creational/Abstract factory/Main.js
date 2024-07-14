@@ -1,4 +1,5 @@
 "use strict";
+/// ABS PRODUCT INTERFACE
 class vennilaSticky {
     flavor() {
         return `this is vennila stick type ice cream`;
