@@ -8,9 +8,9 @@ export class Level {
 
   constructor(public totalNumber: number, spotCount: number) {
     for (let i = 0; i < spotCount; i++) {
-      if (i < spotCount / 3) {
+      if (i < spotCount / 2) {
         this.spots.push(new ParkingSpot(i, new BikeSpot()));
-      } else if (i < (2 * spotCount) / 3) {
+      } else if (i < (2 * spotCount) / 2) {
         this.spots.push(new ParkingSpot(i, new CarSpot()));
       }
     }
