@@ -62,14 +62,14 @@ abstract class iceCreamFactory {
     //// this one method for creating all the icecream(interface) product object
     this.ice = this.makingIceCream();
   }
-
+  //// return type icecream
   abstract makingIceCream(): iceCream;
 
   orderIceCream(): string {
     return `Ordered a ${this.ice.flavor()} ice cream for $${this.ice.price()}`;
   }
 }
-//// DON'T USE LIKE THIS DIRECTLY REFERENCE THE INTERFACE LIKE ABOVE
+//// DON'T USE LIKE THIS DIRECTLY, DO REFERENCE THE INTERFACE LIKE ABOVE
 // // Abstract class implementing the interface
 // abstract class IceCreamFactory implements IceCream {
 //   abstract flavor(): string; // Abstract method to be implemented by subclasses

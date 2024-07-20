@@ -1,3 +1,7 @@
+//// Definition: Singleton Pattern is a creational design pattern that guarantees a class has only one instance and provides a global point of access to it
+
+//// Global Access: The getInstance method can be called from anywhere in the application to get the single instance of the Singleton class this is what is meant by providing a global point of access
+
 class singleTon {
   private static instance: singleTon;
   //// static used here because it depend on class not any instance of this classses
@@ -10,7 +14,6 @@ class singleTon {
     if (!singleTon.instance) {
       singleTon.instance = new singleTon();
     }
-
     return singleTon.instance;
   }
 }
