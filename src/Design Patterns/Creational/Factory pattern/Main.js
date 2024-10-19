@@ -42,7 +42,7 @@ class iceCreamFactory {
         return `Ordered a ${this.ice.flavor()} ice cream for $${this.ice.price()}`;
     }
 }
-//// DON'T USE LIKE THIS DIRECTLY REFERENCE THE INTERFACE LIKE ABOVE
+//// DON'T USE LIKE THIS DIRECTLY, DO REFERENCE THE INTERFACE LIKE ABOVE
 // // Abstract class implementing the interface
 // abstract class IceCreamFactory implements IceCream {
 //   abstract flavor(): string; // Abstract method to be implemented by subclasses

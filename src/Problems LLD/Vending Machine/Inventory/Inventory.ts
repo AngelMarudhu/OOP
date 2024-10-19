@@ -19,7 +19,7 @@ export class Inventory {
     for (let i = 0; i < this.products.length; i++) {
       if (this.products[i].id === productId) {
         index = i;
-        //// once we find the index the no more loop we used lot of time in DSA so then break
+        //// once we find the index the no more loop we've done lot of time these things in DSA so then break
         break;
       }
     }

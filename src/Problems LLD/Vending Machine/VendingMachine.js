@@ -64,6 +64,7 @@ export class VendingMachine {
     returnChange() {
         this.currentState.returnChange();
     }
+    ////// --------------------------------------------------------
     setSelectedProduct(product) {
         this.selectedProduct = product;
     }
