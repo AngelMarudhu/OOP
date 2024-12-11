@@ -114,5 +114,21 @@ function reverse(array) {
 let numbers = [1, 2, 3, 4, 5];
 let reversedNumbers = reverse(numbers);
 console.log(reversedNumbers); // Output: [5, 4, 3, 2, 1]
-// reversedNumbers[0] = "Marudhu"; ///// compile time error Type 'string' is not assignable to type 'number'
-/// type erasure type erasure in TypeScript ensures that your code is type-safe at compile time while producing efficient and compatible JavaScript at runtime code or bytecode
+class NumberContainer {
+    value;
+    constructor(value) {
+        this.value = value;
+    }
+    getValue() {
+        return this.value;
+    }
+}
+class StringContainer {
+    value;
+    constructor(value) {
+        this.value = value;
+    }
+    getValue() {
+        return this.value;
+    }
+}

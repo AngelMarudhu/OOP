@@ -1,42 +1,43 @@
 "use strict";
-// interface Gen {
-//   length: number;
-// }
-// function logging<T extends Gen>(arg: T) {
-//   console.log(arg.length);
-// }
-// let result = logging([1, 2, 3, 4]);
-// console.log(result);
-// function getValues<T>(arg: T): void {
-//   if (Array.isArray(arg)) {
-//     for (let value of arg) {
-//       console.log(value);
-//     }
-//   } else if (typeof arg === "object") {
-//     for (let key in arg) {
-//       console.log(key);
-//     }
-//   }
-// }
-// let obj = { names: "Marudhu", age: 25, living: "coder" };
-// let out = getValues(obj);
-// let arr = [1, 2, 3];
-// // getValues(arr);
+function logging(arg) {
+    console.log(arg.length);
+}
+let result = logging([1, 2, 3, 4]);
+console.log(result);
+function getValues(arg) {
+    if (Array.isArray(arg)) {
+        for (let value of arg) {
+            console.log(value);
+        }
+    }
+    else if (typeof arg === "object") {
+        for (let key in arg) {
+            console.log(key);
+        }
+    }
+}
+/// client code
+let obj = { names: "Marudhu", age: 25, living: "coder" };
+let outs = getValues(obj);
+let arr = [1, 2, 3];
+// getValues(arr);
 /////////////////////////////// ROBOT ANALOGY \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// function moveRobot(distance: number): void {
-//   if (distance < 0) {
-//     throw new Error("something wrong");
-//   }
-//   console.log("hey please move forward");
-// }
-// try {
-//   moveRobot(-2);
-// } catch (error) {
-//   //// type guards helping to detection which one to execute during the run time that means actual object creation if you don't know go back to previous post
-//   if (error instanceof Error) {
-//     console.log(error.message);
-//   }
-// }
+function moveRobot(distance) {
+    if (distance < 0) {
+        throw new Error("something wrong");
+    }
+    console.log("hey please move forward");
+}
+//// client code
+try {
+    moveRobot(-2);
+}
+catch (error) {
+    //// type guards helping to detection which one to execute during the run time that means actual object creation if you don't know go back to previous post
+    if (error instanceof Error) {
+        console.log(error.message);
+    }
+}
 // /// What is exception? very simple guys exception means problem will arise during the execution our code lines for example when the problem occurs it disrupt the normal flow of the codes isn't hahaha
 //// as i told you before don't compare with any other language okay in typescript offers only run time error deduction not possible to getting compile time error detection always run time we only getting an error when code execute okay
 /// 1) when error occurs in typescript we've creating a error object which means error class instantiation
@@ -69,16 +70,17 @@
 //         URIError (class)
 //              Thrown when there is an error in URI handling functions.
 /// you can also create your own custom error subclasses
-// class CustomError extends Error {
-//   constructor(message: string) {
-//     super(message);
-//     this.name = "CustomError";
-//   }
-// }
-// try {
-//   throw new CustomError("This is a custom error.");
-// } catch (error) {
-//   if (error instanceof CustomError) {
-//     console.log(`Caught a custom error: ${error.message}`);
-//   }
-// }
+class CustomError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "CustomError";
+    }
+}
+try {
+    throw new CustomError("This is a custom error.");
+}
+catch (error) {
+    if (error instanceof CustomError) {
+        console.log(`Caught a custom error: ${error.message}`);
+    }
+}

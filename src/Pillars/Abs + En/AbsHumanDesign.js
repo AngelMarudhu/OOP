@@ -1,7 +1,6 @@
 //// GOD GAVE SOME RULES FOR CREATING HUMAN CREATURES LET'S EXPLORE
 //// SMALL DISCLAIMER IT'S JUST ONLY FOR LEARNING PURPOSE SO DON'T OVERTHINK GUYS
-export class HumanDesign {
-}
+export class HumanDesign {}
 //// For example one thing remember this is designer lever problem not an implementation problem for example act GOD as designer god says hey creator i need four methods that's done. all the implementation are your choice whatever you can put into the method doesn't matter to me i need four methods of all the humans that's all the implementation happens in encapsulation are which derived classes area along with some additional information itself done done god says hey abstraction class implementation is not your part just throw the method encapsulation will taking care of okay
 //// encapsulation ----> implementation level problem solution bundling the methods and properties together within a class
 //// abstraction -----> designer level problem without worrying about the implementation. For example: God says, "Hey creator, I need four methods for all humans. The implementation is up to you
